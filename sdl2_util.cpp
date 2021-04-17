@@ -18,7 +18,7 @@ int monitor_sdl_open(void) {
     return -1;
   }
 
-  g_screen = SDL_CreateWindow("Indication module simulator",
+  g_screen = SDL_CreateWindow("triangle",
             SDL_WINDOWPOS_UNDEFINED,
             SDL_WINDOWPOS_UNDEFINED,
             WINDOW_WIDTH, WINDOW_HEIGHT,
