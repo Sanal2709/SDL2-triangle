@@ -4,7 +4,7 @@
     {
       "label": "rebuild x86",
       "type": "shell",
-      "command": ".vscode/compilex86.sh x86",
+      "command": ".vscode/compile.sh x86",
       "options": {
         "cwd": "${workspaceFolder}"
       },

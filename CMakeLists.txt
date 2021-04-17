@@ -11,8 +11,10 @@ include_directories(${PROJECT_SOURCE_DIR})
 file(GLOB_RECURSE INCLUDES "*.h" "src/*.h")
 file(GLOB_RECURSE SOURCES  "main.cpp" "src/*.cpp")
 
+find_package(SDL2 REQUIRED SDL2)
+include_directories(${SDL2_INCLUDE_DIRS})
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${INCLUDES})
 target_compile_options(${PROJECT_NAME} PRIVATE -Wpedantic -Wall -Wextra)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE pthread)
+target_link_libraries(${PROJECT_NAME} PRIVATE SDL2)

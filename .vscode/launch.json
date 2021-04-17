@@ -5,7 +5,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Запустить",
+      "name": "(gdb) Launch",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/x86/triangle",
@@ -15,6 +15,7 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
+      "preLaunchTask": "rebuild x86",
       "setupCommands": [
         {
           "description": "Включить автоматическое форматирование для gdb",
