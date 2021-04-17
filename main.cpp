@@ -70,6 +70,16 @@ static int sdl_event_poll(){
   return 0;
 }
 
+//SDL_SetRenderDrawColor(g_renderer, 50, 50, 50, 255);
+//SDL_RenderDrawPoint(g_renderer, x*SCALE_FACTOR + x*SPACE_SIZE + scale_x, y*SCALE_FACTOR + y*SPACE_SIZE + scale_y);
+//SDL_RenderPresent(g_renderer);
+
+void Draw_Triangle(){
+  SDL_SetRenderDrawColor(g_renderer, 255, 255, 255, 255);
+  SDL_RenderDrawPoint(g_renderer, 639, 479);
+  SDL_RenderPresent(g_renderer);
+}
+
 int main(int argc, char * argv[])
 {
   (void)argc;
@@ -79,6 +89,8 @@ int main(int argc, char * argv[])
     return EXIT_FAILURE;
   }
   std::cout << "SDL opened monitor!" << std::endl;
+
+  Draw_Triangle();
 
   while (!gShutDown){
     /* check buttons and send event to the uart*/
