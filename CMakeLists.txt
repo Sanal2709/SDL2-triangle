@@ -8,8 +8,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
-file(GLOB_RECURSE INCLUDES "*.h" "src/*.h")
-file(GLOB_RECURSE SOURCES  "main.cpp" "src/*.cpp")
+file(GLOB_RECURSE INCLUDES "*.h")
+file(GLOB_RECURSE SOURCES  "main.cpp" "sdl2_util.cpp")
 
 find_package(SDL2 REQUIRED SDL2)
 include_directories(${SDL2_INCLUDE_DIRS})
@@ -17,4 +17,4 @@ include_directories(${SDL2_INCLUDE_DIRS})
 add_executable(${PROJECT_NAME} ${SOURCES} ${INCLUDES})
 target_compile_options(${PROJECT_NAME} PRIVATE -Wpedantic -Wall -Wextra)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE SDL2)
+target_link_libraries(${PROJECT_NAME} PRIVATE SDL2 m)
