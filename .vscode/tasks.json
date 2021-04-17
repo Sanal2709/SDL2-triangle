@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "rebuild x86",
+      "type": "shell",
+      "command": ".vscode/compilex86.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build"
+    },
+    {
+      "label": "clean",
+      "type": "shell",
+      "command": "rm -rf *",
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
