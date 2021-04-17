@@ -8,7 +8,7 @@
       "name": "(gdb) Запустить",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/hello_triangle",
+      "program": "${workspaceFolder}/build/x86/triangle",
       "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
